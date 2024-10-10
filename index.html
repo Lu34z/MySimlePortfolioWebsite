@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function toggleDropdown() {
+            var content = document.getElementById("dropdownContent");
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome to Lucas's Portfolio</h1>
+    </header>
+
+    <section id="about" align="center">
+        <h1>Well, hello!</h1>
+        <p>Hello! Don't know how you got here. This page is still a work in progress, but if you would like to know
+            more about it, click the "About" or "Projects" link at the top of the page.
+        </p>
+        <br>
+        <h1>Who am I?</h1>
+        <p>My name is Lucas Richard, I am 14 years old at the time of writing this (8/10/24), and in the future
+            I want to be a software engineer or game developer.
+        </p>
+        <br>
+        <h1>Why did I make this?</h1>
+        <p>I made this website because I wanted to experience what it was like to make my first webstie,
+            and so that I would develop my coding skills.
+        </p>
+        <h1>Do I get a prize for reading all of this?</h1>
+        <p>
+            <i>Actually, yes!</i> You do get a prize if you made it this far, click <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">here</a>
+             to claim your free $10 gift card!
+        </p>    
+    </section>
+
+    <section id="updatelog" align="center">
+        <h2>Update Log</h2>
+        <button onclick="toggleDropdown()">Show/Hide</button>
+        <div id="dropdownContent" style="display:none;">
+            <p>8/9/24 - Site created</p> 
+            <p>8/10/24 - Site published</p>
+            <p>More updates soon..</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Lucas Richard. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

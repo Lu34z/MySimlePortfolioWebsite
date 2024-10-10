@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Project</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        clicks = 0;
+        function addclick() {
+            clicks++;
+
+            document.getElementById("clickscount").innerHTML = "Clicks: " + clicks;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Back</a></li>
+            </ul>
+        </nav>
+        <h1>Clicker Project</h1>
+    </header>
+
+    <div align="center">
+        <h2 id="clickscount">Clicks: 0</h2>
+
+        <button onclick="addclick()">Click me</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Lucas Richard. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPC Project</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function playGame(playerChoice) {
+    const choices = ['rock', 'paper', 'scissors'];
+    const computerChoice = choices[Math.floor(Math.random() * 3)];
+
+    let result = '';
+
+    if (playerChoice === computerChoice) {
+        result = 'It\'s a draw!';
+    } else if (
+        (playerChoice === 'rock' && computerChoice === 'scissors') ||
+        (playerChoice === 'scissors' && computerChoice === 'paper') ||
+        (playerChoice === 'paper' && computerChoice === 'rock')
+    ) {
+        result = 'You win!';
+    } else {
+        result = 'You lose!';
+    }
+
+    document.getElementById('playtext').innerText = `Computer chose ${computerChoice}. ${result}`;
+}
+
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Back</a></li>
+            </ul>
+        </nav>
+        <h1>Rock, Paper, Scissors!</h1>
+    </header>
+
+    <div align="center">
+        <h2 id="playtext">Choose</h2>
+        <button onclick="playGame('rock')">Rock</button>
+        <button onclick="playGame('paper')">Paper</button>
+        <button onclick="playGame('scissors')">Scissors</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Lucas Richard. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
